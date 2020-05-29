@@ -1,59 +1,39 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content=""><title>当我们在说中台时到底在说什么 | bing 在此践行极客精神</title><link rel="stylesheet" type="text/css" href="/libinghope/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/normalize/8.0.1/normalize.min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//lib.baomitu.com/jquery/3.4.0/jquery.min.js"></script><link rel="icon" mask="" sizes="any" href="/libinghope/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/libinghope/favicon.ico"><link rel="apple-touch-icon" href="/libinghope/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/libinghope/apple-touch-icon.png"><script>var _hmt = _hmt || [];
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content=""><title>如何使用负载均衡算法 | bing 在此践行极客精神</title><link rel="stylesheet" type="text/css" href="/libinghope/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/normalize/8.0.1/normalize.min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//lib.baomitu.com/jquery/3.4.0/jquery.min.js"></script><link rel="icon" mask="" sizes="any" href="/libinghope/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/libinghope/favicon.ico"><link rel="apple-touch-icon" href="/libinghope/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/libinghope/apple-touch-icon.png"><script>var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");
   hm.src = 'https://hm.baidu.com/hm.js?' + '7fd7a164eeb84e0acb05d20ba17a98ee';
   var s = document.getElementsByTagName("script")[0];
   s.parentNode.insertBefore(hm, s);
-  })();</script><meta name="generator" content="Hexo 4.2.0"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">当我们在说中台时到底在说什么</h1><a id="logo" href="/libinghope/.">bing 在此践行极客精神</a><p class="description">写写学习coding的历程，有时记也录下自己的心情</p></div><div id="nav-menu"><a class="current" href="/libinghope/."><i class="fa fa-home"> 首页</i></a><a href="/libinghope/chapter"><i class="fa fa-book"> 章节</i></a><a href="/libinghope/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/libinghope/about/"><i class="fa fa-user"> 关于</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">当我们在说中台时到底在说什么</h1><div class="post-meta">Apr 9, 2020<span> | </span><span class="category"><a href="/libinghope/categories/%E4%B8%AD%E5%8F%B0/">中台</a></span></div><a class="disqus-comment-count" href="/libinghope/7.3/#vcomment"><span class="valine-comment-count" data-xid="/libinghope/7.3/"></span><span> 条评论</span></a><div class="post-content"><h2 id="企业为什么需要建立中台"><a href="#企业为什么需要建立中台" class="headerlink" title="企业为什么需要建立中台"></a>企业为什么需要建立中台</h2><p>一个最让我感到满意的答案：”因为当今这样一个互联网时代，用户才是商业战场的中心，为了快速响应用户的需求，借助平台化的力量可以事半功倍。“</p>
-<p>这背后的逻辑很简单，不断的快速响应、探索、挖掘、引领用户的需求，才是企业得以生存和持续发展的关键因素。</p>
-<p>那些真正尊重用户，甚至不惜调整自己、颠覆自己来响应用户的企业，将在这场以用户为中心的商业战争中得以生存和发展。反之，那些在过去的成就上，故步自封、心存侥幸希望用户会像以前一样继续追随自己的企业，必定会被淘汰。</p>
-<p>这便是这个时代最基本的也是最残酷的生存法则。</p>
-<p><img src="https://pic.downk.cc/item/5ebb7113c2a9a83be5b07e04.jpg" alt="数字化企业"></p>
-<p>而平台化之所以重要，就是因为在这场以用户为中心的现代商业战争中，它赋予或者加强了企业最核心的竞争力：<strong>用户响应力</strong>。平台化额思想恰好鼓励企业不断抽象沉淀自己核心的底层能力，通过平台化包装，得以更好的赋能前台业务，用底层的确定性来帮助企业应对前台业务以及最终用户需求的不确定性。</p>
-<p>平台化发展的最新阶段，就是目前我们所说的中台了。<strong>中台化是平台化的下一站，是平台不断对于自身治理演进，打破技术边界，逐渐拥抱业务，容纳业务、具备更强的业务属性的过程。中台关注为前台赋能，真正为前台而生。</strong></p>
-<ul>
-<li><p>此处所说的前台：包括但不限于用户直接使用的网站、手机 App、微信公众号、小程序等都属于前台范畴。</p>
-</li>
-<li><p>此处所说的后台：由后台系统组成的后端支撑平台。每个后台系统一般管理了企业的一类核心资源（数据 + 计算），例如财务系统、产品系统、客户管理系统、仓库物流管理系统等，这类系统构成了企业的后台。</p>
-</li>
+  })();</script><meta name="generator" content="Hexo 4.2.0"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">如何使用负载均衡算法</h1><a id="logo" href="/libinghope/.">bing 在此践行极客精神</a><p class="description">写写学习coding的历程，有时记也录下自己的心情</p></div><div id="nav-menu"><a class="current" href="/libinghope/."><i class="fa fa-home"> 首页</i></a><a href="/libinghope/chapter"><i class="fa fa-book"> 章节</i></a><a href="/libinghope/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/libinghope/about/"><i class="fa fa-user"> 关于</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">如何使用负载均衡算法</h1><div class="post-meta">May 29, 2020<span> | </span><span class="category"><a href="/libinghope/categories/%E5%BE%AE%E6%9C%8D%E5%8A%A1/">微服务</a></span></div><a class="disqus-comment-count" href="/libinghope/8.21/#vcomment"><span class="valine-comment-count" data-xid="/libinghope/8.21/"></span><span> 条评论</span></a><div class="post-content"><p>所谓服务路由,就是服务消费者在发起服务调用时，必须根据特定的规则来选择服务节点，从而满足某些特定的需求。</p>
+<h3 id="服务路由的应用场景"><a href="#服务路由的应用场景" class="headerlink" title="服务路由的应用场景"></a>服务路由的应用场景</h3><ul>
+<li>分组调用。一般来讲，为了保证服务的高可用性，实现异地多活的需求，一个服务往往不止部署在一个数据中心，而且出于节省成本等考虑，有些业务可能不仅在私有机房部署，还会采用公有云部署，甚至采用多家公有云部署。服务节点也会按照不同的数据中心分成不同的分组，这时对于服务消费者来说，选择哪一个分组调用，就必须有相应的路由规则。</li>
+<li>灰度发布。在服务上线发布的过程中，一般需要先在一小部分规模的服务节点上先发布服务，然后验证功能是否正常。如果正常的话就继续扩大发布范围；如果不正常的话，就需要排查问题，解决问题后继续发布。这个过程就叫作灰度发布，也叫金丝雀部署。</li>
+<li>流量切换。在业务线上运行过程中，经常会遇到一些不可抗力因素导致业务故障，比如某个机房的光缆被挖断，或者发生着火等事故导致整个机房的服务都不可用。这个时候就需要按照某个指令，能够把原来调用这个机房服务的流量切换到其他正常的机房。</li>
+<li>读写分离。对于大多数互联网业务来说都是读多写少，所以在进行服务部署的时候，可以把读写分开部署，所有写接口可以部署在一起，而读接口部署在另外的节点上。</li>
 </ul>
-<p>很多企业的后台，在创建之初的目的并不是服务于前台系统的业务创新，只是简单的为了实现后端资源的电子化管理，解决企业的管理效率等问题。随着时间的推移，这些系统的弊端变得越来越明显，诸如年久失修，一身补丁，变更困难，甚至于根本没法改了。</p>
-<p>传统的解决这些问题的方法，基本上就是推倒重建了。这个过程中又有企业安全，审计，合规等等的问题，导致后台和前台不能很好的配合。而且企业越是不断发展壮大，后台修改的成本和风险就越高。</p>
-<p>采用中台的策略可以有效的解决上面那些问题。有了中台，我们可以将早已臃肿不堪的前台系统中稳定通用的业务能力“沉降”到中台层，为前台减肥，恢复前台的响应力；又可以将后台系统中需要频繁变化或是需要被前台直接使用的业务能力“提取”到中台层，赋予这些业务能力更强的灵活度和更低的变更成本；或者干脆直接对于后台进行中台化改造，通过配置化、自助化、白屏化等形式为后台加速，从而为前台提供更强大、更迅捷、更易用的支援。</p>
-<p>中台就像是在前台与后台这两个速度不匹配的齿轮之间添加的⼀组“变速齿轮”，将前台与后台的速率进行匹配，是前台与后台的桥梁和润滑剂。它为前台而生，易于前台使用，将后台资源顺滑地通过前台导流向用户，支撑企业更好地响应用户。</p>
-<h3 id="企业级能力复用平台"><a href="#企业级能力复用平台" class="headerlink" title="企业级能力复用平台"></a>企业级能力复用平台</h3><p>这九个字就是对中台最贴切的定义了，最重要的是这几个字背后对”中台“价值的阐释。</p>
-<ul>
-<li>企业级</li>
-</ul>
-<p>企业级定义了中台的范围。不是说一个企业只能有一个中台，也不代表一个中台就是只能包含一家企业，企业级更多代表的是中台处理的问题在企业级别，即至少包含多条业务线或服务多个前台产品（团队），如果一个中台只为了支持一条业务线或产品线，那就不是中台，即使它用了服务化或是大数据等技术。</p>
-<p>企业级这一点非常非常重要。它让指明了，中台建设的事情并不是一个技术问题，而是一个要上升到企业架构的问题。做中台建设的时候，一定是跳出单条业务线、站在企业整体视角来审视业务全景。</p>
-<p>想清楚了这一点对中台的理解就有了一次质的变化，也就知道为什么一开始用做系统服务化的方式做中台会面临那么多的问题，比如最常见的组织和干系方以及利益再分配的问题。</p>
-<p>从中台的兴起与爆发我们也能看到一个趋势，就是越来越多的企业，无论是想提升自身的运营效率，还是出于业务创新发展的需求，都已经把企业全局视角、跨业务线的能力沉淀，提到了前所未有的战略高度。</p>
-<ul>
-<li>能力</li>
-</ul>
-<p>提到中台，最常听到的一个词就是“能力”。可能是因为能力这个词足够简单，又有着足够的包容度与宽度。</p>
-<p>能力定义了中台主要承载的对象。能力的抽象解释了为什么会有那么多种类中台的存在，也能解释为什么每家企业的中台都不一样，因为不同的企业之所以能够同时存在，就是因为其核心能力不同，可以满足用户不同层面的需求，也就是我们常说的差异化竞争力。</p>
-<ul>
-<li>复用</li>
-</ul>
-<p>复用定义了中台的核心价值，也承载了上面讲到的从平台化到中台化的演进过程。传统的平台化对于“可复用性”和“易复用性”并没有给予足够的关注，更多关注的是如何消除掉重复的能力建设，既所谓的“去重”。</p>
-<p>但中台的提出和兴起，体现出一种对于前台业务的使用体验更加关注的趋势。让人们通过对于“可复用性”和“易复用性”的关注，将目光更多地从平台内部的建设转换到平台对于前台业务的支撑上。这里有一个从治理到赋能的视角转换，既从“去重”到“复用”的关注上。</p>
-<p>“去重”与“复用”虽然经常一起出现，一起被提及，但是谈论的完全不是一件事情，目的不同，难度也不同。“去重”讲的更多是向后看，是技术驱动的；“复用”讲的更多是向前看，是业务驱动和用户驱动的。而正这个视角的转变，我认为是理解中台概念的关键，所以</p>
-<ol>
-<li>“复用”是中台更加关注的目标；</li>
-<li>“可复用性”和“易复用性”是衡量中台建设好坏的重要指标；</li>
-<li>“业务响应力”和“业务满意度”是考核中台建设进度的重要标准。</li>
-</ol>
-<p>这也能解释为什么很多互联网企业，将对于平台的治理，通过业务抽象以及可配置化和白屏化的改造升级，把这个过程称之为对于平台的中台化改造过程。</p>
-<ul>
-<li>平台</li>
-</ul>
-<p>平台定义了中台的主要形式。区别于传统应用系统拼凑的方式，中台通过对于更细粒度能力的识别与平台化沉淀，实现企业能力的柔性复用，更好地支撑前台业务，来满足对于业务的快速响应和复用的需求。</p>
-<p>以用户为中心的持续规模化创新，是中台建设的核心目标。企业的用户响应能力和规模化创新能力，是互联网时代企业综合竞争力的核心体现。平台化包括中台化只是帮助企业达到这个目标的手段，并不是目标本身。</p>
-<p>中台（⽆论是技术中台、业务中台还是组织中台）的建设，根本上是为了解决企业响应力困境， 弥补创新驱动需要快速变化的前台和稳定可靠驱动需要变化周期相对较慢的后台之间的矛盾，提供⼀个中间层来适配前台与后台的配速问题，打通并顺滑链接前台需求与后台资源，帮助企业从整体上不断提升用户响应力。</p>
-<p>所以，中台到底是什么根本不重要，如何想方设法持续提高企业对于用户的响应力才是最重要的。而平台化或是中台化，只是恰巧走在了这条正确的大道上。</p>
-</div><iframe src="/libinghope//donate/?AliPayQR=https://i.loli.net/2020/03/01/p9zFe7XOC6VufSx.jpg&amp;WeChatQR=https://i.loli.net/2020/03/01/p5tMeDmHyxXrNz4.jpg&amp;GitHub=null&amp;BTCQR=null&amp;BTCKEY=null&amp;PayPal=null" style="overflow-x:hidden; overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;" frameborder="0" scrolling="no"></iframe><div class="tags"><a href="/libinghope/tags/%E4%B8%AD%E5%8F%B0/">中台</a></div><div class="post-nav"><a class="pre" href="/libinghope/5.33/">深入理解微服务架构：银弹 or 焦油坑？</a><a class="next" href="/libinghope/5.32/">传统的可扩展架构模式：分层架构和SOA</a></div><div id="vcomment"></div><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script><script>var notify = 'false' ? true : false;
+<h3 id="服务路由的规则"><a href="#服务路由的规则" class="headerlink" title="服务路由的规则"></a>服务路由的规则</h3><h4 id="条件路由"><a href="#条件路由" class="headerlink" title="条件路由"></a>条件路由</h4><p>条件路由是基于条件表达式的路由规则，以下面的条件路由为例。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">condition:&#x2F;&#x2F;0.0.0.0&#x2F;dubbo.test.interfaces.TestService?category&#x3D;routers&amp;dynamic&#x3D;true&amp;priority&#x3D;2&amp;enabled&#x3D;true&amp;rule&#x3D;&quot; + URL.encode(&quot; host &#x3D; 10.20.153.10&#x3D;&gt; host &#x3D; 10.20.153.11&quot;)</span><br></pre></td></tr></table></figure>
+
+<p>这里面“condition://”代表了这是一段用条件表达式编写的路由规则，具体的规则是</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">host &#x3D; 10.20.153.10 &#x3D;&gt; host &#x3D; 10.20.153.11</span><br></pre></td></tr></table></figure>
+
+<p>分隔符“=&gt;”前面是服务消费者的匹配条件，后面是服务提供者的过滤条件。当服务消费者节点满足匹配条件时，就对该服务消费者执行后面的过滤规则。那么上面这段表达式表达的意义就是 IP 为“10.20.153.10”的服务消费者都调用 IP 为“10.20.153.11”的服务提供者节点。</p>
+<p>如果服务消费者的匹配条件为空，就表示对所有的服务消费者应用，就像下面的表达式一样。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&#x3D;&gt; host ！&#x3D; 10.20.153.11</span><br></pre></td></tr></table></figure>
+
+<p>如果服务提供者的过滤条件为空，就表示禁止服务消费者访问，就像下面的表达式一样。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">host &#x3D; 10.20.153.10&#x3D;&gt;</span><br></pre></td></tr></table></figure>
+
+<p>另外，在某些时候，服务调用者会有意无意的使用不合理的调用，影响了服务的稳定性，这时候可以通过，黑名单的功能暂时予以封杀，如使用机房隔离规则，或者使用读写隔离的方法.</p>
+<h4 id="脚本路由"><a href="#脚本路由" class="headerlink" title="脚本路由"></a>脚本路由</h4><p>脚本路由是基于脚本语言的路由规则，常用的脚本语言比如 JavaScript、Groovy、JRuby 等。不再赘述.</p>
+<h3 id="服务路由的获取方式"><a href="#服务路由的获取方式" class="headerlink" title="服务路由的获取方式"></a>服务路由的获取方式</h3><h4 id="本地配置"><a href="#本地配置" class="headerlink" title="本地配置"></a>本地配置</h4><p>顾名思义就是路由规则存储在服务消费者本地上。服务消费者发起调用时，从本地固定位置读取路由规则，然后按照路由规则选取一个服务节点发起调用。</p>
+<h4 id="配置中心管理"><a href="#配置中心管理" class="headerlink" title="配置中心管理"></a>配置中心管理</h4><p>这种方式下，所有的服务消费者都从配置中心获取路由规则，由配置中心来统一管理。</p>
+<h3 id="动态下发"><a href="#动态下发" class="headerlink" title="动态下发"></a>动态下发</h3><p>这种方式下，一般是运维人员或者开发人员，通过服务治理平台修改路由规则，服务治理平台调用配置中心接口，把修改后的路由规则持久化到配置中心。因为服务消费者订阅了路由规则的变更，于是就会从配置中心获取最新的路由规则，按照最新的路由规则来执行。</p>
+<p>上面三种方式实际使用时，是有一定区别的。</p>
+<p>一般来讲，服务路由最好是存储在配置中心中，由配置中心来统一管理。这样的话，所有的服务消费者就不需要在本地管理服务路由，因为大部分的服务消费者并不关心服务路由的问题，或者说也不需要去了解其中的细节。通过配置中心，统一给各个服务消费者下发统一的服务路由，节省了沟通和管理成本。</p>
+<p>但也不排除某些服务消费者有特定的需求，需要定制自己的路由规则，这个时候就适合通过本地配置来定制。</p>
+<p>而动态下发可以理解为一种高级功能，它能够动态地修改路由规则，在某些业务场景下十分有用。比如某个数据中心存在问题，需要把调用这个数据中心的服务消费者都切换到其他数据中心，这时就可以通过动态下发的方式，向配置中心下发一条路由规则，将所有调用这个数据中心的请求都迁移到别的地方。</p>
+</div><iframe src="/libinghope//donate/?AliPayQR=https://i.loli.net/2020/03/01/p9zFe7XOC6VufSx.jpg&amp;WeChatQR=https://i.loli.net/2020/03/01/p5tMeDmHyxXrNz4.jpg&amp;GitHub=null&amp;BTCQR=null&amp;BTCKEY=null&amp;PayPal=null" style="overflow-x:hidden; overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;" frameborder="0" scrolling="no"></iframe><div class="tags"><a href="/libinghope/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/">微服务</a></div><div class="post-nav"><a class="next" href="/libinghope/8.20/">如何使用负载均衡算法</a></div><div id="vcomment"></div><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script><script>var notify = 'false' ? true : false;
 var verify = 'false' ? true : false;
 var GUEST_INFO = ['nick','mail','link'];
 var guest_info = 'nick,mail,link'.split(',').filter(function(item){
